@@ -1,0 +1,27 @@
+- title t("clinics.labels.index_title")
+- javascript "http://maps.google.com/maps/api/js?sensor=false"
+#clinics_results
+  - unless search_by_states? @state
+    #clinics_info_header
+      = render "info_header"
+  - if search_by_states? @state
+    #clinics_states_picker.container
+      = render "states_picker", :states => State.all, :search_clinic => @search_clinic, :state_id => @state ? @state.id : nil
+  - if @state
+    #clinics_cities_picker.container
+      = render "cities_picker", :cities => @state.cities.with_clinics, :search_clinic => @search_clinic
+  %p.info
+    = t('clinics.search.results', :count => @clinics.total_entries)
+    - unless params[:l] == "poland" || @clinics.total_entries > 0
+      - if @state
+        = t("cities_picker.labels.no_results")
+      = t("globals.or")
+      = link_to t("clinics.search.choose_poland"), url_for(:l => "poland")
+  - if @clinics.total_entries > 0
+    = link_to "Pokaż wyniki wyszukiwania na mapie", "#", :id => "show_map_link", :class => "panel-button"
+    #clinics_map{ :style => "display: none;" }
+      = render "map"
+  #clinics
+    = render @clinics, :search_phrases => @search_clinic.name.split(" ")
+    - if @clinics.total_pages > 1
+      .loading

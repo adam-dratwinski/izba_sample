@@ -1,0 +1,7 @@
+- title t("clinics.labels.show_title", :name => @clinic.name)
+#clinic
+  = render "info"
+  = render "/shared/tabs", :tabs => get_tabs(:offices)
+  .tabs
+    .offices
+      = render @clinic.offices_with_specialisations

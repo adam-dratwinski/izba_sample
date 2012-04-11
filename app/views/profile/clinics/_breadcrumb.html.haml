@@ -1,0 +1,9 @@
+- render "profile/departaments/breadcrumb"
+- add_breadcrumb(I18n.t('breadcrumbs.clinics'), profile_departament_clinics_path(@departament))
+- add_breadcrumb(@clinic.name_was, profile_departament_clinic_path(@departament, @clinic)) unless @clinic.new_record?
+- if params[:action] == "index"
+  - add_breadcrumb(I18n.t('breadcrumbs.index'), profile_departament_clinics_path(@departament)) 
+- if params[:action] == "new"
+  - add_breadcrumb(I18n.t('breadcrumbs.new'), new_profile_departament_clinic_path(@departament, @clinic)) 
+- if params[:action] == "edit" || params[:action] == "update"
+  - add_breadcrumb(I18n.t('breadcrumbs.edit'), edit_profile_departament_clinic_path(@departament, @clinic)) 

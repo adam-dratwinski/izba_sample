@@ -1,0 +1,53 @@
+#application #searchform {
+  width: 750px;
+  float: right;
+}
+#searchform {
+  margin: 0 auto;
+  width: 749px;
+}
+.searchform {
+  margin: 0;
+  border: 2px solid #bbbbbb;
+  float: left;
+  padding: 10px;
+  width: 725px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(#ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+}
+#application .searchform .search-description {
+  display: none;
+}
+.form-row {
+  margin: 0;
+}
+.searchform button.button {
+  font-size: 18px;
+  line-height: 20px;
+  height: 42px;
+  width: 101px;
+  padding: 0;
+}
+#application .searchform button {
+  padding: 3px 17px;
+}
+.searchform button.button-loading {
+  padding-left: 7px;
+  padding-right: 10px;
+}
+#search_clinic_name {
+  width: 612px;
+  line-height: 20px;
+  height: 20px;
+  padding: 10px 5px;
+}
+.searchform .search-description {
+  font-size: 13px;
+  color: #999999;
+  margin-bottom: 4px;
+}

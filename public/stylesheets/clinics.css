@@ -1,0 +1,353 @@
+.clinic {
+  display: block;
+  border: 1px solid #fff;
+  border-top: 1px solid #bbb;
+  padding: 5px;
+}
+
+.clinic h2 a {
+  color: #3c3c33;
+}
+
+#clinic .clinic-logo img {
+  padding: 2px;
+  border: 1px solid #ddd;
+  float: left;
+  margin-right: 10px;
+}
+
+#map_canvas .clinic {
+  border-top: none;
+  padding: 0;
+}
+
+#clinics_results {
+  padding-left: 10px;
+}
+
+#clinics_results p {
+  margin: 10px 0;
+}
+
+#clinic {
+  padding-left: 10px;
+  border-top: 1px solid #bbb;
+}
+
+#clinic .clinic {
+  border-top: none;
+}
+
+#clinics_info_header {
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(#ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eeeeee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+  padding-left: 10px;
+  margin-left: -10px;
+  border: 1px solid #bbb;
+  border-left: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.clinic .row {
+  margin: 3px 0;
+}
+
+.clinic .address {
+  padding-left: 20px;
+  background: url(/images/map.png) 0 50% no-repeat;
+  line-height: 16px;
+  color: #999;
+  font-style: italic;
+  display: block;
+  margin-left: 65px;
+}
+
+.clinic .contact {
+  display: none;
+  padding-left: 20px;
+  line-height: 16px;
+  color: #999;
+  font-style: italic;
+  margin-left: 65px;
+  background: url(/images/phone.png) 0 50% no-repeat;
+}
+
+#clinic .contact {
+  display: block;
+}
+
+.clinic .logo-micro {
+  border: 1px solid #ddd;
+  padding: 2px;
+  display: inline-block;
+  margin-right: 5px;
+  float: left;
+}
+
+.clinic .description {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.offices {
+  padding: 5px 0;
+}
+.offices .label {
+  display: block;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  color: #999;
+  font-style: italic;
+  padding: 3px;
+}
+
+.offices .label a {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+
+.map {
+  border: 2px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.map header {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  background: -moz-linear-gradient(top, #eeeeee, #ffffff);
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff');
+}
+
+.map footer {
+  height: 40px;
+  display: block;
+  padding: 5px;
+  margin: 0;
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eeeeee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+}
+
+.map h2 {
+  font-size: 14px;
+  margin: 4px;
+}
+
+.map .show-details {
+  display: none;
+}
+
+.map .form {
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+  margin: 3px 0 0 0;
+  float: right;
+  width: 411px;
+}
+
+.map .form .button-loading {
+}
+
+.map .find-me {
+  margin-top: 3px;
+}
+
+#map_canvas {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background: url(/images/grid-loader.gif) 50% 50% no-repeat;
+}
+
+.clinic .more {
+  margin-left: 5px;
+}
+
+.clinic .specialisations ul {
+  list-style-type: disc;
+}
+
+.clinic .specialisations ul li {
+  background: url(/images/clinic-bullet.png) 0 50% no-repeat;
+  padding-left: 16px;
+}
+#clinics .loading {
+  background: url(/images/grid-loader.gif) 50% 50% no-repeat;
+  display: block;
+  margin: 10px 0;
+  height: 30px;
+}
+
+.offices .office {
+  clear: both;
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+}
+.offices .office:last-child {
+  margin-bottom: 0;
+}
+.offices .office .show-details {
+  float: right;
+  margin-right: 10px;
+}
+
+#clinic_map {
+  height: 300px;
+  margin: 10px 0;
+  border: 2px solid #bbb;
+  -webkit-border-radius: 3px;
+}
+
+.disable-highlight {
+}
+.enable-highlight {
+  display: none;
+}
+
+#show_map_link {
+  margin: 10px 0;
+}
+
+.map .pagination {
+  float: right;
+  font-weight: normal;
+  font-size: 12px;
+}
+.map .pagination .info {
+  float: left;
+  margin-right: 5px;
+}
+.map .pagination .seperator {
+  float: left;
+  margin: 0 5px;
+}
+
+.map .pagination .total {
+  float: left;
+  margin-right: 5px;
+}
+.map .pagination .on-page {
+  float: left;
+}
+
+.clinic h3 a {
+  color: #222fe4;
+  font-weight: normal;
+}
+
+.clinic h3 a:visited {
+  color: #551a8b;
+  font-weight: normal;
+}
+
+#clinics_map .show-on-map {
+  display: none;
+}
+
+#search_map {
+  width: 220px;
+}
+
+#clinics.hide-details .offices {
+  display: none;
+}
+
+.distance-indicator {
+  background-image: url(/images/gradient.png);
+  border: 1px solid #bbb;
+  width: 100px;
+  height: 12px;
+}
+
+#clinics .clinic:hover {
+  -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
+  border: 1px solid #bbb;
+}
+
+.clinic .distance {
+  margin-left: 65px;
+  margin-bottom: 10px;
+}
+
+.clinic .distance strong,
+.clinic .distance span,
+.clinic .distance .distance-indicator {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#clinic .description {
+  position: relative;
+}
+
+#clinic .actions {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 220px;
+}
+
+#clinic .status {
+  line-height: 16px;
+  padding: 5px;
+  display: block;
+  -webkit-border-radius: 3px;
+  text-align: left;
+}
+
+#clinic .status-verified {
+  background: -webkit-gradient(linear, left top, left bottom, from(#8dce26), to(#7ea146));
+  border: 1px solid #098400;
+  margin-top: 5px;
+}
+
+#clinic .status-noverified {
+  padding: 0;
+}
+
+
+#clinic .status-verified span{
+  color: #fff;
+  background: transparent url(/images/apply_icon.png) 0 50% no-repeat;
+  padding-left: 20px;
+}
+
+#clinic .status-noverified span {
+  color: #ff0800;
+}
+
+#clinic .report-error {
+  display: block;
+  margin-top: 5px;
+}
+
+#clinics_states_picker .states, #clinics_cities_picker {
+  clear: both;
+}
+
+#clinics_states_picker .states li,
+#clinics_cities_picker .cities li {
+  display: inline-block;
+}
+
+
+#clinic h2 {
+  font-size: 14px;
+}
+

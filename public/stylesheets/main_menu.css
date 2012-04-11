@@ -1,0 +1,11 @@
+nav.main-menu {
+  float: left;
+  margin: 5px 0;
+}
+nav.main-menu li {
+  float: left;
+}
+nav.main-menu li a {
+  font-size: 12px;
+}
+

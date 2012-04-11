@@ -1,0 +1,21 @@
+= render "/shared/header", :layout => :application
+%body#application
+  .top-bar
+    .top-bar-wrapper
+      = render '/shared/main_menu'
+      = render '/shared/session_menu'
+  .page-wrapper
+    %header#header
+      = link_to image_tag("/images/logo2.png"), root_path, :class => "logo"
+      #searchform
+        = render "/clinics/searchform"
+    %section#body
+      %aside#side_menu.search-options
+        - unless @clinic
+          = render "/clinics/searchoptions"
+        - else
+          = render "/clinics/clinic_options"
+      %section#content
+        = yield
+  %footer#footer
+    = render '/shared/footer'

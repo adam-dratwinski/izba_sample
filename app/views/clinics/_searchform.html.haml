@@ -1,0 +1,9 @@
+= focus_on '#search_field'
+= custom_form_for @search_clinic, :method => "post", :html => { :class => "searchform" } do |f|
+  = f.input :state_id, :as => :hidden, :input_html => { :value => @state ? @state.id : "" }
+  = f.input :city_id, :as => :hidden, :input_html => { :value => @city ? @city.id : "" }
+  .search-description
+    %p= t("clinics.search.hint")
+  .form-fields-inline
+    = f.input :name, :label => false, :placeholder => t("clinics.search.placeholder") 
+    = f.button :search

@@ -1,0 +1,8 @@
+= grid_for @clinics, @search do |g|
+  - g.column :name
+  - g.column :city_name do |clinic|
+    = clinic.city_name
+  - g.column :street
+  - g.actions do |clinic|
+    = icon I18n.t('globals.edit'), :edit, edit_profile_departament_clinic_path(@departament, clinic)
+    = icon I18n.t('globals.destroy'), :remove, profile_departament_clinic_path(@departament, clinic), :confirm => I18n.t('globals.destroy_confirmation'), :method => :delete, :remote => true

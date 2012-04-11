@@ -1,0 +1,236 @@
+.form {
+  display: block;
+  margin: 10px 0;
+}
+.form-row {
+  display: inline-block;
+}
+.form-captcha .simple_captcha_label,
+.form-row label {
+  display: inline-block;
+  margin: 5px 0;
+  margin-right: 10px;
+  line-height: 20px;
+}
+.form-fields .form-row {
+  display: inline-block;
+  margin: 3px 0;
+  position: relative;
+  width: 100%;
+} 
+.form-captcha .simple_captcha_label,
+.form-fields label {
+  float: left;
+  font-size: 14px;
+  font-height: 21px;
+  text-align: right;
+  vertical-align: bottom;
+  display: inline-block;
+  margin-right: 5px;
+  width: 30%;
+  margin-left: -20px;
+}
+
+.form-captcha .simple_captcha_field input,
+.form textarea,
+.form input.string,
+.form input.autocomplete,
+.form input.autocomplete-search,
+.form select.select,
+.form input.password {
+  border: 1px solid #bbb;
+  padding: 6px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  background: #fff;
+  vertical-align: bottom;
+  margin: 0;
+}
+
+.form-fields input.string,
+.form-fields input.autocomplete,
+.form-fields input.autocomplete-search,
+.form-fields select.select,
+.form-fields input.password {
+  width: 70%;
+}
+
+.form textarea {
+  height: 200px;
+  width: 70%;
+}
+
+.form-fields select.select {
+  width: 50%;
+  height: auto;
+}
+
+form.form select.select {
+  color: #000;
+}
+
+.form textarea:focus,
+.form .form-captcha input:focus,
+.form input.string:focus,
+.form input.autocomplete:focus,
+.form input.autocomplete-search:focus,
+.form select.select:focus,
+.form input.password:focus {
+  -moz-box-shadow: 0 0 3px 0 rgba(0,0,0, 0.3);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0, 0.3);
+  box-shadow: 0 0 3px 0 rgba(0,0,0, 0.3);
+}
+
+.form div.form-captcha-error .simple_captcha_field input,
+.form-row-with-error input.string,
+.form-row-with-error input.autocomplete,
+.form-row-with-error input.autocomplete-search,
+.form-row-with-error select.select,
+.form-row-with-error input.password {
+  border: 1px solid #CE2700;
+  background: #FAD4B4;
+  color: #CE2700;
+}
+
+.form input.ui-autocomplete-loading {
+  background: #fff url(/images/customform/ajax-loader.gif) 100% 50% no-repeat;
+}
+
+.form input.ui-autocomplete-hide-loading {
+  background: none;
+}
+
+.form select.select {
+  padding: 5px;
+}
+
+.form select.autocomplete-element {
+  width: 191px;
+}
+
+.form-captcha-errors,
+.form-error-messages, 
+.form-row-with-error label {
+  color: #990000;
+}
+
+.form .string input:disabled {
+  background: #efefef;
+}
+
+.form input.autocomplete-search {
+  margin-left: 10px; 
+  width: 100px;
+  background: #fff url(/images/customform/find.png) 105px 50% no-repeat;
+  padding-right: 22px;
+}
+
+
+.form-row.picture img {
+  border: 1px solid #bbb;
+  padding: 3px;
+  background: #fff;
+  display: inline-block;
+  float: left;
+}
+
+.form-row.picture .panel-button {
+  float: left;
+  margin: 0 0 3px 5px;
+  width: 200px;
+
+}
+
+.form .placeholder {
+  color: #bbb;
+}
+
+.form .hint {
+  background: #232323 url(/images/customform/help.png) 5px 4px no-repeat;
+  position: absolute;
+  color: #fff;
+  padding: 4px 10px;
+  line-height: 16px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 2px 2px #3c3c33;
+  -webkit-box-shadow: 0 0 2px 2px #3c3c33;
+  box-shadow: 0 0 2px 2px #3c3c33;
+  border: 1px solid #fff;
+  z-index: 9999;
+  top: 0;
+  left: 100%;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 160px;
+  display: none;
+  padding-left: 26px;
+}
+
+.form .error {
+  display: inline-block;
+  font-size: 11px;
+  clear: left;
+  margin-left: -15px;
+  padding-left: 30%;
+  margin-top: 3px;
+  color: #990000;
+}
+.form .button {
+  margin: 0;
+  vertical-align: top;
+}
+
+.form .boolean label {
+  float: left;
+  margin: 0;
+  width: auto;
+}
+.form input.boolean {
+  padding-left: 30%;
+  float: left;
+  display: inline-block;
+  margin-top: 7px;
+  margin-left: -15px;
+}
+.form-row.boolean {
+  padding-left: 30%;
+  margin-left: 0;
+  width: 70%;
+}
+.form-actions,
+.form-fields {
+  display: block;
+  clear: both;
+  margin: 10px 0;
+}
+.form-actions .button-to-left {
+  float: left;
+  margin: 0;
+}
+.form-actions {
+  text-align: right;
+  clear: both;
+  width: 100%;
+}
+
+.form ul.token-input-list-facebook {
+  float: none;
+  display: inline-block;
+  width: 70%;
+  border: 1px solid #bbb;
+  line-height: 20px; 
+  padding: 1px 6px;
+}
+
+.form-captcha .simple_captcha_image  {
+  width: 100px;
+  margin-top: 4px;
+  float: left;
+}
+.form-captcha .simple_captcha_field input {
+  width: 100px;
+  display: inline-block;
+}

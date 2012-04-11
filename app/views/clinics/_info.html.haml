@@ -1,0 +1,20 @@
+.clinic
+  .description
+    = link_to image_tag(@clinic.departament.logo.url(:micro)), clinic_path(@clinic), :class => "logo-micro"
+    %h2
+      = truncated_link_to @clinic.name, clinic_path(@clinic), :length => 90
+    .row.address
+      = @clinic.full_address
+      = link_to t("clinics.labels.show_on_map"), clinic_inquiries_path(@clinic)
+    - if @clinic.phone_number || @clinic.fax_number
+      .row.contact
+        = "tel." + @clinic.phone_number if @clinic.phone_number
+        = "fax." + @clinic.fax_number if @clinic.fax_number
+    .actions
+      = render "clinics/verification_status", :departament => @clinic.departament
+      = link_to t("clinics.labels.report_error"), new_clinic_data_report_path(@clinic.friendly_id), :class => "report-error", :remote => true
+    .row.owner
+      = t("clinics.labels.owner")
+      = truncated_link_to @clinic.departament.name, departament_path(@clinic.departament)
+    = render "tabs"
+#data_report_dialog{"data-width" => 500, "data-title" => t("data_reports.labels.new")}

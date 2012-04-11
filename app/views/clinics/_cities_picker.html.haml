@@ -1,0 +1,7 @@
+%h2=t("cities_picker.labels.header")
+- unless cities.empty?
+  %ul.cities.container.box-light
+    - cities.each do |city|
+      %li
+        = link_to_unless_current city.name, search_clinic.name.blank? ? city_clinics_path(city) : search_city_clinic_path(city, search_clinic.name)
+        = "," unless city == cities.last

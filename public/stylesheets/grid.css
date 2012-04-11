@@ -1,0 +1,47 @@
+.grid {
+  margin: 5px 0;
+}
+
+.grid-filters {
+  display: block;
+  margin: 5px 0;
+}
+
+.grid-filters-show {
+}
+
+.grid table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.grid th {
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+  font-size: 11px;
+}
+.grid th, .grid td {
+  border: 1px solid #bbb;
+  padding: 4px;
+}
+.grid td {
+  background: #fff;
+}
+.grid .even td {
+  background: #f9f9f9;
+}
+.grid .status {
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  background: url(/images/grid-loader.gif);
+  float: left;
+  margin: 4px 0px;
+  display: none;
+}
+.grid td.center {
+  text-align: center;
+  width: 50px;
+}

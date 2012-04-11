@@ -1,0 +1,40 @@
+.city-picker {
+  z-index: 500;
+  border: 2px solid #bbbbbb;
+  height: 240px;
+  width: 200px;
+  padding: 5px;
+  position: absolute;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 5px 0 #999999;
+  -webkit-box-shadow: 0 0 5px 0 #999999;
+  box-shadow: 0 0 5px 0 #999999;
+  background: #ffffff;
+}
+.city-picker .search {
+  z-index: 100;
+  width: 191px;
+  padding: 3px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+}
+.city-picker .states {
+  border: 1px solid #dddddd;
+  font-weight: bold;
+  margin-top: 5px;
+  height: 202px;
+  overflow-y: scroll;
+  font-size: 13px;
+  background: #ffffff;
+  padding: 2px 4px;
+}
+.city-picker .state { margin: 5px 0; }
+.city-picker .cities {
+  font-weight: normal;
+  margin-top: 5px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+

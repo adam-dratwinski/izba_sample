@@ -1,0 +1,32 @@
+.clinic{:class => cycle("even", "odd"), "data-coords" => { :lat => clinic.lat, :lng => clinic.lng }.to_json }
+  .description
+    = link_to image_tag(clinic.departament.logo.url(:micro)), clinic_path(clinic), :class => "logo-micro"
+    %h3
+      = truncated_link_to clinic.name, clinic_path(clinic), :length => 60, :highlight => search_phrases
+    .row.address
+      = highlight clinic.full_address + ",", search_phrases
+      = link_to t("clinics.labels.show_on_map"), "#clinics_map", :class => "show-on-map"
+    - if clinic.search_distance
+      .row.distance
+        = distance_indicator(clinic.search_distance, 10000)
+        %strong 
+          = number_to_distance(clinic.search_distance, 2)
+        %span
+          = "od twojej lokalizacji"
+    .row.owner
+      = t("clinics.labels.owner")
+      = truncated_link_to clinic.departament.name, clinic.departament, :length => 70
+    .row
+      .offices
+        - clinic.offices_with_specialisations.each do |office|
+          .office{:style => "display: none;"}
+            .label
+              = highlight link_to(office.name, office), search_phrases
+              = office.full_address
+              = link_to("szczegóły ", "#", :class => "show-details")
+            .specialisations{:style => "display: none;"}
+              - office.specialisations.group_by(&:group).each do |group, specialisations|
+                .group
+                  %strong= group
+                  %ul.group-items 
+                    %li= highlight specialisations.map(&:name).join(", "), search_phrases

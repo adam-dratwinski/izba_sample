@@ -1,0 +1,4 @@
+%ul#location_options.panels
+  %li.label= t("clinics.search.current_location")
+  %li= search_menu_link_if true, session[:address], clinics_path, :id => "current_location"
+  %li= search_menu_link_if true, t("clinics.labels.clinics"), others_clinic_path(@clinic)

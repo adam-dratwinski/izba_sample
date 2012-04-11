@@ -1,0 +1,16 @@
+.ui-dialog {
+   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+div.ui-dialog .ui-dialog-content {
+  padding: 0 10px;
+}
+
+.ui-dialog-loading {
+  background: url(/images/grid-loader.gif);
+  display: none;
+  position: absolute;
+  right: 28px;
+  width: 60px;
+  height: 18px;
+}

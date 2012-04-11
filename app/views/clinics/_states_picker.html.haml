@@ -1,0 +1,9 @@
+%h2=t("states_picker.labels.header")
+%ul.states.container.box-light
+  - states.each do |state|
+    %li
+      - unless search_clinic.name.blank?
+        = link_to_unless state_id == state.id, state.name, search_state_clinic_path(state, search_clinic.name)
+      - else
+        = link_to_unless state_id == state.id, state.name, state_clinics_path(state)
+      = "," unless state == states.last

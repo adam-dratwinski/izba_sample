@@ -1,0 +1,55 @@
+.hint {
+  background: #232323;
+  position: absolute;
+  color: #fff;
+  padding: 2px 10px;
+  line-height: 16px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 0 2px 2px #3c3c33;
+  -webkit-box-shadow: 0 0 2px 2px #3c3c33;
+  border: 1px solid #fff;
+  z-index: 9999;
+  display: none;
+}
+
+.hint-icon {
+  position: absolute;
+  z-index: 10028;
+}
+.hint-icon-top {
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 6px;
+  background: url(/images/hint/top.png) 50% 100% no-repeat;
+}
+
+.hint-icon-bottom {
+  left: 0;
+  right: 0;
+  top: -7px;
+  height: 6px;
+  background: url(/images/hint/bottom.png) 50% 100% no-repeat;
+}
+
+.hint-icon-left {
+  right: -8px;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: url(/images/hint/left.png) 0% 50% no-repeat;
+}
+
+.hint-icon-right {
+  left: -8px;
+  top: 0;
+  bottom: 0;
+  width: 7px;
+  background: url(/images/hint/right.png) 0% 50% no-repeat;
+}
+
+.hint-close {
+  float: right;
+  margin-left: 10px;
+}

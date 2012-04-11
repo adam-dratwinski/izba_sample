@@ -1,0 +1,34 @@
+#users_form,
+#sessions_form {
+}
+
+#sessions_info {
+  margin-left: 20px;
+  display: block;
+}
+
+#sessions #content {
+  width: 579px;
+  border-right: 1px solid #bbb;
+  padding-right: 20px;
+}
+
+#sessions aside {
+  width: 370px;
+}
+
+#sessions h2 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #bbb;
+}
+
+#sessions .info {
+  margin: 10px 0;
+  float: left;
+  color: #999;
+}
+
+aside {
+  float: left;
+}

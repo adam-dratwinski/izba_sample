@@ -1,0 +1,23 @@
+.map
+  %header
+    %h3 
+      Mapa wyników 
+      .pagination{"data-per-page" => @clinics.per_page, "data-total-entries" => @clinics.total_entries }
+        .info
+          = t("clinics.search.pagination_info")
+        .on-page
+          = @clinics.count > @clinics.per_page ? @clinics.per_page : @clinics.count
+        .seperator
+          z
+        .total
+          = @clinics.total_entries
+        = link_to t("clinics.search.load", :count => @clinics.per_page), "#", :class => "load"
+  #map_canvas{ :style => "height: 400px;", "data-coords" => { :lat => session[:coords][0], :lng => session[:coords][1] }.to_json }
+  %footer
+    = link_to "Znajdź mnie", find_geocodes_path(:format => "json"), :class => "button button-to-left find-me"
+    = form_tag "#", :class => "form" do
+      .form-fields-inline
+        .form-row
+          %label= t("clinics.search.find_address")
+          = text_field_tag :search_map, nil, :class => "string", "data-placeholder" => t("main.labels.street_example")
+        = custom_form_button :search, { :label => I18n.t('forms.labels.search') }

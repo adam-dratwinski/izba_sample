@@ -1,0 +1,10 @@
+- if departament.verified?
+  %strong.status.status-verified
+    %span 
+      = t("clinics.labels.verified")
+- else
+  %strong.status.status-noverified
+    %span
+      = t("clinics.labels.noverified")
+  = t("clinics.labels.are_you_owner")
+  = link_to t("clinics.labels.verify"), new_departament_verification_path(departament)

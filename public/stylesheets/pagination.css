@@ -1,0 +1,54 @@
+nav.pagination {
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+  min-height: 26px;
+}
+nav.pagination ul {
+  display: inline-block;
+}
+nav.pagination li {
+  display: inline-block;
+  margin: 0 2px;
+  border: 1px solid #bbb;
+  background: -moz-linear-gradient(bottom, #ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+  -moz-border-radius: 3px;
+  padding: 3px;
+}
+nav.pagination li.next {
+  margin-right: 0;
+}
+nav.pagination li a {
+  padding: 2px 5px;
+  display: block;
+}
+
+nav.pagination li:hover {
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-color: #999; 
+} 
+nav.pagination li:hover a {
+  text-decoration: none;
+}
+nav.pagination li:active {
+  background: -moz-linear-gradient(bottom, #ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+}
+nav.pagination li.truncate, 
+nav.pagination li.current {
+  border: none;
+  background: none;
+  font-weight: bold;
+} 
+nav.pagination li.current:hover {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: none; 
+}

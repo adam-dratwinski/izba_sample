@@ -1,0 +1,656 @@
+pl:
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%d %b"
+      long: "%B %d, %Y"
+
+    day_names: [niedziela, poniedziałek, wtorek, środa, czwartek, piątek, sobota]
+    abbr_day_names: [nie, pon, wto, śro, czw, pia, sob]
+
+    month_names: [~, styczeń, luty, marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień]
+    abbr_month_names: [~, sty, lut, mar, kwi, maj, cze, lip, sie, wrz, paź, lis, gru]
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%d %b %Y %H:%M"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "przed południem"
+    pm: "po południu"
+
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " i "
+      last_word_connector: " oraz "
+
+    select:
+      prompt: "Proszę wybrać"
+
+  number:
+    format:
+      separator: ","
+      delimiter: " "
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+
+    currency:
+      format:
+        format: "%u %n"
+        unit: "PLN"
+        separator: ","
+        delimiter: " "
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: true
+
+    percentage:
+      format:
+        delimiter: ""
+
+    precision:
+      format:
+        delimiter: ""
+
+    human:
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one:   "bajt"
+            other: "bajty"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: Tysiąc
+          million: Milion
+          billion: Miliard
+          trillion: Trylion
+          quadrillion: Kwadrylion
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "pół minuty"
+      less_than_x_seconds:
+        one:   "mniej niż sekundę"
+        few:   "mniej niż %{count} sekundy"
+        other: "mniej niż %{count} sekund"
+      x_seconds:
+        one:   "1 sekunda"
+        few:   "%{count} sekundy"
+        other: "%{count} sekund"
+      less_than_x_minutes:
+        one:   "mniej niż minutę"
+        few:   "mniej niż %{count} minuty"
+        other: "mniej niż %{count} minut"
+      x_minutes:
+        one:   "1 minuta"
+        few:   "%{count} minuty"
+        other: "%{count} minut"
+      about_x_hours:
+        one:   "około godziny"
+        few:   "około %{count} godziny"
+        other: "około %{count} godzin"
+      x_days:
+        one:   "1 dzień"
+        few:   "%{count} dni"
+        other: "%{count} dni"
+      about_x_months:
+        one:   "około miesiąca"
+        few:   "około %{count} miesiące"
+        other: "około %{count} miesięcy"
+      x_months:
+        one:   "1 miesiąc"
+        few:   "%{count} miesiące"
+        other: "%{count} miesięcy"
+      about_x_years:
+        one:   "około rok"
+        few:   "około %{count} lata"
+        other: "około %{count} lat"
+      over_x_years:
+        one:   "ponad rok"
+        few:   "ponad %{count} lata"
+        other: "ponad %{count} lat"
+      almost_x_years:
+        one:   "prawie rok"
+        few:   "prawie %{count} lata"
+        other: "prawie %{count} lat"
+    prompts:
+      year:   "Rok"
+      month:  "Miesiąc"
+      day:    "Dzień"
+      hour:   "Godzina"
+      minute: "Minuta"
+      second: "Sekundy"
+
+  helpers:
+    select:
+      prompt: "Proszę wybrać"
+
+    submit:
+      create: 'Utwórz %{model}'
+      update: 'Aktualizuj %{model}'
+      submit: 'Zapisz %{model}'
+
+  errors:
+    format: "%{attribute} %{message}"
+
+    messages: &errors_messages
+      inclusion: "wartość tego pola nie znajduje się na liście dopuszczalnych wartości"
+      exclusion: "wartość tego pola jest na liście zarezerwowanych wartości"
+      invalid: "pole to jest wypełnione nieprawidłowo"
+      confirmation: "wartość pola nie zgadza się z potwierdzeniem"
+      accepted: "%{attribute} musi zostać zaakceptowany"
+      empty: "pole to nie może być puste"
+      blank: "pole to nie może być puste"
+      too_long: "wartość pola jest za długa (maksymalnie %{count} znaków)"
+      too_short: "wartość pola jest za krótka (przynajmniej %{count} znaków)"
+      wrong_length: "wartość pola ma nieprawidłową długość (powinna wynosić %{count} znaków)"
+      not_a_number: "wartość pola nie jest liczbą"
+      not_an_integer: "wartość pola musi być liczbą całkowitą"
+      greater_than: "wartość pola musi być większa od %{count}"
+      greater_than_or_equal_to: "wartość pola musi być większa lub równa %{count}"
+      equal_to: "wartość pola musi być równa %{count}"
+      less_than: "wartość pola musi być mniejsza od %{count}"
+      less_than_or_equal_to: "wartość pola musi być mniejsza lub równa %{count}"
+      odd: "wartość pola musi być nieparzysta"
+      even: "wartość pola musi być parzysta"
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one:    "%{model} nie został zachowany z powodu jednego błędu"
+          other:  "%{model} nie został zachowany z powodu %{count} błędów"
+        body: "Błędy dotyczą następujących pól:"
+    messages:
+      taken: "%{attribute} jest już zajęty"
+      record_invalid: "Negatywne sprawdzenie poprawności: %{errors}"
+      <<: *errors_messages
+
+      full_messages:
+        format: "%{attribute}%{message}"
+
+    attributes:
+      gallery:
+        name: "Nazwa"
+        updated_at: "Data aktualizacji"
+      geocode:
+        address: "Twoja lokalizacja"
+      data_report:
+        email: "E-mail"
+        your_email: "Twój e-mail"
+        message: "Uwagi"
+        is_read: "Przeczytana"
+        created_at: "Data wysłania"
+      inquiry: 
+        email: "Twój e-mail"
+        name: "Imię i nazwisko"
+        message: "Treść wiadomości"
+        is_read: "Przeczytana"
+        created_at: "Data"
+      image:
+        image: "Zdjęcie"
+      user: 
+        email: "E-mail"
+        city_name: "Miasto"
+        contact_person: "Osoba kontaktowa"
+        contact_phone: "Telefon kontaktowy"
+        departament_name: "Nazwa placówki"
+        current_password: "Aktualne hasło"
+        password: "Hasło"
+        password_confirmation: "Powtórz hasło"
+        nip: "Numer NIP"
+        post_code: "Kod pocztowy"
+        rules_acceptance: "Akceptuje regulamin"
+        state_id: "Województwo"
+        street: "Ulica"
+        is_verified: "Aktywny"
+      departament:
+        phone_number: "Numer telefonu"
+        fax_number: "Numer FAX"
+        name: "Nazwa"
+        nip: "Numer NIP"
+        post_code: "Kod pocztowy"
+        "state": "Województwo"
+        street: "Ulica"
+        city_name: "Miasto"
+        state_name: "Województwo"
+        user_email: "Email użytkownika"
+      clinic: 
+        name: "Nazwa"
+        street: "Ulica"
+        state_id: "Województwo"
+        state: "Województwo"
+        city_name: "Miasto"
+        city: "Miasto"
+      office:
+        clinic: "Przychodnia"
+        name: "Nazwa"
+        street: "Ulica"
+        state: "Województwo"
+        state_id: "Województwo"
+        city_name: "Miasto"
+        specialisation_tokens: "Specjalizacje"
+        specialisations: "Specjalizacje"
+        disease_tokens: "Leczone choroby"
+        diseases: "Leczone choroby"
+      specialisation:
+        resort_code_part_9: "Część IX kodu"
+        resort_code_part_10: "Część X kodu"
+        name: "Nazwa"
+        group: "Grupa"
+        updated_at: "Aktualizacja"
+      session:
+        login: "Email"
+        password: "Hasło"
+
+
+  pagination:
+    prev: "Poprzednia"
+    next: "Następna"
+
+  simple_form:
+    "yes": "Tak"
+    "no": "Nie"
+    required:
+      text: "wymagane"
+      mark: ""
+    error_notification:
+      default_message: "Formularz zawiera błędy"
+    hints:
+      contact_person: "Imię i nazwisko osoby kontaktowej, konieczne przy weryfikacji konta"
+      contact_phone: "Numer telefonu do osoby kontaktowej, konieczne przy weryfikacji konta"
+      departament_name: "Nazwa głównego oddziału placówki"
+      password: "Musi zawierać co najmniej 4 znaki"
+      specialisation_tokens: "Podczas rozpoczęcia pisania, ukaże się lista dostępnych specjalizacji"
+  views:
+    pagination:
+      previous: "Poprzednia"
+      next: "Następna"
+      last: "Ostatnia"
+      first: "Pierwsza"
+      truncate: "..."
+  
+  meta_search:
+    or: "lub"
+    predicates: 
+      contains: "%{attribute} zawiera"
+      equals: "%{attribute} równa się"
+      is_true: "%{attribute}"
+
+  users:
+    notices:
+      created: "Użytkownik został dodany"
+      destroyed: "Użytkownik został usunięty"
+      unverified: "Weryfikacja użytkownika została cofnięta"
+      updated: "Zmiany zostały zapisane"
+      verified: "Użytkownik został zweryfikowany"
+      signin_thanks: "Twoje konto zostało pomyślnie utworzone, został rozpoczęty proces weryfikacji, skontaktujemy się z Tobą w celu aktywacji konta"
+    labels:
+      account: "Konto"
+      all: "Wszyscy"
+      change_password: "Zmień hasło"
+      choose_state_first: "Wybierz najpierw województwo"
+      departament: "Departament"
+      edit: "Edycja konta użytkownika"
+      recent: "Ostatnio zarejestrowani"
+      status: "Status użytkownika"
+      unverified: "Nieaktywni"
+      user_unverified: "Użytkownik niezweryfikowany"
+      user_verified: "Użytkownik zweryfikowany"
+      new: "Dodaj nowego użytkownika"
+      current_address: "Twoja lokalizacja"
+    errors: 
+      departament_nil: "Brak wybranego departamentu"
+      empty: "Brak użytkowników"
+      city_belongs_to_state: "Miasto musi należeć do województwa"
+      current_password: "Aktualne hasło musi być poprawne"
+    actions:
+      browse: "Przeglądaj użytkowników"
+      new: "Dodaj nowego użytkownika"
+      verify: "weryfikuj"
+      unverify: "cofnij weryfikacje"
+    placeholders:
+      email: "np. j.kowalski@gmail.com"
+      nip: "np. 123 456 7890"
+      contact_person: "np. Jan Kowalski"
+      contact_phone: "np. 600 300 100"
+      street: "np. Jana Pawła 6/3"
+
+  user_departament:
+    actions: 
+      new: "Przypisz nowy departament"
+    errors:
+      nil: "Nie wybrano żadnego departamentu"
+    labels:
+      destroy: "Usuń departament"
+      edit: "Edytuj departamentu"
+      view: "Dane departamentu"
+      options: "Opcje"
+      current_departament: "Aktualny departament"
+    notices:
+      created: "Departament został przypisany"
+      destroyed: "Powiązanie z departamentem zostało usunięte"
+    placeholders: 
+      departament: "np. Med sp.z.o.o"
+
+  departaments:
+    notices:
+      crop_info: "Możesz teraz wybrać fragment logo, który pokażę się na Twojej stronie"
+      updated: "Departament został zaktualizowany"
+      created: "Departament został utworzony"
+      destroyed: "Departament został usunięty"
+    labels: 
+      new: "Dodaj nowy departament"
+      back: "Wróć do listy departamentów"
+      crop_logo: "Zaznaczenie fragmentu logo"
+      preview_logo: "Podgląd"
+      user_departament: "Edycja"
+      users: "Zespół zarządzający"
+      edit: "Edycja departamentu"
+      change_logo: "Wybierz plik z logo"
+      current_logo: "Logo"
+      all: "Wszystkie"
+      clinics: "Przychodnie"
+      list_clinics: "Lista przychodni"
+      add_clinic: "Dodaj przychodnie"
+      offices: "Gabinety"
+      verify: "Weryfikacja zakładu \"%{departament_name}\""
+      verification: "Weryfikacja"
+      show_title: "Instytucja %{name}"
+    actions: 
+      crop_logo: "Wytnij inny fragment"
+      change_logo: "Zmień logo"
+    errors:
+      empty: "Brak departamentów"
+      city_belongs_to_state: "Miasto musi należeć do województwa"
+  specialisations_letters:
+    labels:
+      dialog_title: "Dostępne specjalizacje"
+  diseases_letters:
+    labels:
+      dialog_title: "Dostępne choroby"
+  offices: 
+    labels: 
+      new: "Nowy gabinet"
+      back: "Wróć do listy gabinetów"
+      back_to_offices: "Wróć do strony przychodni"
+      for_clinic: "placówki"
+      edit: "Edycja gabinetu"
+      add_clinic_first: "Przed dodaniem gabinetu dodaj najpierw przychodnie"
+      list: "Lista gabinetów"
+      show_specialisations_letter_dialog: "przeglądaj dostępne specjalizacje"
+      show_diseases_letter_dialog: "przeglądaj dostępne choroby"
+      specialisations: "Specjalizacje gabinetu:"
+      show_title: "Gabinet %{name} %{clinic_name}"
+    notices:
+      created: "Gabinet został utworzony"
+      destroyed: "Gabinet został usunięty"
+      updated: "Gabinet został zaktualizowany"
+      failed: "Nie udało się zapisać zmian, popraw formularz i spróbuj ponownie"
+    actions:
+    errors: 
+      city_belongs_to_state: "Miasto musi należeć do województwa"
+      empty: "Brak dodanych gabinetów"
+  clinics: 
+    labels:
+      new: "Nowa przychodnia"
+      back: "Wróć do listy przychodni"
+      edit: "Edycja przychodni"
+      show: ""
+      specialisations: "Specjalizacje"
+      diseases: "Leczone choroby"
+      offices: "Gabinety"
+      clinics: "Inne placówki"
+      inquiry: "Kontakt"
+      show_on_map: "zobacz na mapie"
+      owner: "Zarządzana przez"
+      send_message: "Wyślij zapytanie"
+      verified: "Placówka zweryfikowana"
+      noverified: "Placówka niezweryfikowana"
+      are_you_owner: "Pracujesz w tej placówce?"
+      verify: "Zweryfikuj ją"
+      report_error: "Zgłoś niepoprawne dane"
+      show_title: "Gabinety placówki %{name}"
+      others_title: "Inne placówki %{name}"
+      contact_title: "Dane kontaktowe placówki %{name}"
+      index_title: "Znajdź placówki"
+    errors: 
+      city_belongs_to_state: "Miasto musi należeć do województwa"
+      empty: "Brak placówek"
+    notices:
+      failed: "Wystąpiły błędy podczas zapisywania przychodni"
+      created: "Placówka została utworzona"
+      destroyed: "Placówka została usunięta"
+      updated: "Placówka została zaktualizowana"
+    search:
+      for_state: "w województwie" 
+      for_city: "w mieście"
+      hint: "Wpisz szukaną dolegliwość, nazwę placówki lub inne słowo"
+      label: "Wyniki wyszukiwania dla frazy"
+      placeholder: "Np. stomatolog"
+      highlight: "Podświetlenie wyników"
+      current_location: "Aktualna lokalizacja"
+      find_address: "Inny adres"
+      sort_by: "Sortuj według"
+      location_pick: "Wybierz inną"
+      location_poland: "Cała polska"
+      sort_by_relevance: "Dopasowania do frazy"
+      sort_by_location: "Najbliższych mojej lokalizacji"
+      type: "Typ placówek"
+      type_all: "Wszystkie"
+      type_public: "Publiczne"
+      type_private: "Prywatne"
+      choose_poland: "wyświetl wyniki dla całej polski"
+      for_address: "w pobliżu adresu"
+      poland: "cała polska"
+      view: "Widok"
+      view_map: "Mapa"
+      view_list: "Lista"
+      browse: "Przeglądaj według miast"
+      view_both: "Mapa i lista"
+      pagination_info: "Liczba wyników"
+      load: "pobierz następne %{count}"
+      show_details: "Ukryj szczegóły wyników"
+      results: 
+        zero: "Nie znaleziono wyników spełniających kryteria wyszukiwania, spróbój wprowadzić inną frazę"
+        one: "Znaleziono %{count} placówkę"
+        few: "Znaleziono %{count} placówki"
+        other: "Znaleziono %{count} placówek"
+  states_picker:
+    labels: 
+      header: "Ustaw filtr województw (opcjonalnie)"
+  cities_picker:
+    labels: 
+      header: "Ustaw filtr miast (opcjonalnie)"
+      no_results: ", wybierz inne województwo"
+  departament_users:
+    labels:
+      new: "Przypisz użytkownika"
+      back: "Wróć do listy przypisanych użytkowników"
+      list: "Lista użytkowników"
+    notices:
+      created: "Użytkownik został przypisany do departamentu"
+      destroyed: "Użytkownik nie jest już przypisany do departamentu"
+      failed: "Nie udało się przypisać użytkownika do departamentu, sprawdź podane poniżej błędy"
+  diseases:
+    labels:
+      all: "Wszystkie"
+      back: "Wróć do listy chorób"
+      edit: "Edycja choroby"
+      list: "Lista chorób"
+      new: "Dodaj nową chorobę"
+      choose: "Wybierz pasujące choroby"
+    notices:
+      created: "Dodano nową chorobę"
+      destroyed: "Usunięto chorobę"
+      failed: "Nie udało się zapisać choroby, sprawdź błędy i spróboj ponownie"
+      updated: "Dane choroby zostały zaktualizowane"
+  specialisations:
+    labels:
+      all: "Wszystkie"
+      back: "Wróć do listy specjalizacji"
+      edit: "Edycja specjalizacji"
+      list: "Lista specjalizacji"
+      new: "Dodaj nową specjalizację"
+      choose: "Wybierz pasujące specjalizacje"
+    notices:
+      created: "Utworzono nową specjalizację"
+      destroyed: "Usunięto specjalizację"
+      failed: "Nie udało się zapisać specjalizacji, sprawdź błędy i spróbój ponownie"
+      updated: "Dane specjalizacji zostały zaktualizowane"
+  sessions:
+    labels:
+      signin: "Zaloguj się"
+      have_account: "Posiadasz już konto?"
+      dont_have_account: "Nie posiadasz jeszcze konta?"
+      signup: "Zarejestruj się"
+      signup_link: "Zarejestruj się"
+      login_link: "Zaloguj się"
+      signup_header: "Dołącz do nas!"
+      signup_info: "Rejestracja w serwisie izbaprzyjec.pl, pozwoli Ci zarządzać własną placówką, edytować podstawowe informację o placówce, dodawać zdjęcia i wiele innych"
+    notices:
+      created: "Zostałeś zalogowany"
+      destroyed: "Zostałeś wylogowany"
+      failed: "Zły login, hasło lub konto jest nieaktywne"
+      login_required: "Aby przeglądać tą stronę musisz być zalogowany"
+  main: 
+    labels:
+      change_location: "wybierz inną lokalizację"
+      find_me: "znajdź mnie"
+      street_example: "np. Hetmańska 7, Poznań"
+      search_location: "Wybierz inną lokalizację"
+  images:
+    labels:
+      delete: "Usuń"
+  inquiries: 
+    labels:
+      new: "Wyślij zapytanie"
+      show: "Wiadomość od %{name}"
+      back: "Wróć do listy wiadomości"
+      mark_as_read: "Oznacz jako przeczytaną"
+      mark_as_unread: "Oznacz jako nieprzeczytaną"
+      all: "Wszystkie"
+      unread: "Nieprzeczytane"
+      read: "Przeczytane"
+      list: "Wysłane zapytania"
+    notices:
+      created: "Twoje zapytanie zostało wysłane. Dziękujemy"
+      failed: "Wysyłanie zapytania nie powiodło się, sprawdź formularz i spróbuj ponownie"
+      readed: "Wiadomość została oznaczona jako przeczytana"
+      unreaded: "Wiadomość została oznaczona jako nieprzeczytana"
+  pages:
+    labels: 
+      list: "Lista stron"
+      all: "Strony"
+  galleries: 
+    labels:
+      list: "Galerie"
+      all: "Galerie"
+      new: "Utwórz nową"
+      edit: "Edycja galerii"
+      back: "Wróć do listy"
+  photos:
+    labels:
+      edit: "Dodaj nowe zdjęcie"
+      index: "Dodane zdjęcia"
+
+  data_reports:
+    labels:
+      new: "Zgłoś niepoprawne dane"
+      new_info: "Wyjaśnij, gdzie w opisie placówki znalazłeś błąd"
+      list: "Lista zgłoszeń"
+      all: "Wszystkie"
+      read: "Przeczytane"
+      unread: "Nieprzeczytane"
+      mark_as_read: "Oznacz jako przeczytane"
+      mark_as_unread: "Oznacz jako nieprzeczytane"
+      show: "Szczegóły dotyczące zapytania"
+      back: "Wróć do listy zapytań"
+    notices: 
+      destroyed: "Zgłoszenie zostało usunięte"
+      errors: "Zgłoszenie nie zostało wysłane, popraw formularz i spróbuj ponownie"
+  
+  geocode:
+    labels:
+      drag_to_move_picker: "Możesz przeciągnąć ikonę w interesujące Ciebie miejsce"
+
+  hints:
+    hide_notice: "Ukryj komunikat"
+
+  globals: 
+    "yes": "Tak"
+    'no': "Nie"
+    others: "Pozostałe"
+    view: "zobacz"
+    show: "zobacz"
+    choose: "wybierz"
+    or: "lub"
+    destroy_confirmation: "Czy jesteś pewien?"
+    eg: "np."
+    edit: "Edytuj"
+    destroy: "Usuń"
+    prompt: "--wybierz--"
+    "nil": "brak"
+    access_denied: "Brak dostępu do przeglądania tej strony"
+    ago: "temu"
+    distance: "odległość"
+    top_phrases: "Najczęściej wyszukiwane"
+    change: "zmień"
+    grids:
+      filters:
+        show: "Pokaż opcje wyszukiwania"
+      search:
+        no_results: "Brak wyników wyszukiwania"
+
+  breadcrumbs:
+    profile: "Panel"
+    departaments: "Departamenty"
+    departament: "Departament"
+    clinics: "Przychodnie"
+    edit: "Edycja"
+    index: "Przeglądaj"
+    specialisations: "Specjalizacje"
+    diseases: "Choroby"
+    new: "Dodaj"
+    users: "Użytkownicy"
+    change_password: "Zmień hasło"
+    departament: "Departament"
+    departament_users: "Zespół zarządzający"
+    offices: "Gabinety"
+    crop_logo: "Zaznaczenie fragmentu logo"
+    inquiries: "Zapytania"
+    galleries: "Galerie"
+    pages: "Strony"
+    data_reports: "Zgłoszenia"
+
+  routes:
+    states: "wojewodztwa"
+
+  forms:
+    labels:
+      submit: "Wyślij"
+      search: "Szukaj"
+      login: "Zaloguj"
+  simple_captcha:
+    label: "Wpisz kod z obrazka"
+    message: 
+      inquiry: "Wpisz poprawnie kod z obrazka"
+      datareport: "Wpisz poprawnie kod z obrazka"

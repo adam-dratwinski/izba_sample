@@ -1,0 +1,16 @@
+.icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.icon-remove {
+  background-image: url(/images/icon_remove.png);
+}
+.icon-edit {
+  background-image: url(/images/icon_edit.png);
+}
+.icon-message {
+  background-image: url(/images/icon_message.png);
+}

@@ -1,0 +1,32 @@
+%ul#location_options.panels
+  %li.label= t("clinics.search.current_location")
+  %li= search_menu_link_if params[:l] == "poland" || search_by_states?(@state), session[:address], search_option_link(@context_path, :l => nil, :state_id => nil, :city_id => nil), :id => "current_location"
+  %li= link_to t("clinics.search.location_pick"), "#", :class => "location-picker"
+  %li= search_menu_link_unless search_by_states?(@state), t("clinics.search.browse"), clinics_states_path
+  %li= search_menu_link_unless params[:l] == "poland", t("clinics.search.location_poland"), search_option_link(@context_path, :l => "poland", :state_id => nil, :city_id => nil)
+#location_picker{ :style => "display: none;", "data-width" => 800, "data-title" => t("main.labels.search_location") }
+  = render "main/location_picker"
+
+%ul#sort_by_options.panels
+  %li.label= t("clinics.search.sort_by")
+  - unless params[:l] == "poland"
+    %li= search_menu_link_if params[:sb] == "relevance", t("clinics.search.sort_by_location"), search_option_link(@context_path, :sb => nil) 
+  %li
+    = search_menu_link_unless params[:sb] == "relevance", t("clinics.search.sort_by_relevance"), search_option_link(@context_path, :sb => "relevance") 
+
+%ul#search_type_option.panels
+  %li.label= t("clinics.search.type")
+  %li= search_menu_link_unless params[:ct] == nil, t("clinics.search.type_all"), search_option_link(@context_path, :ct => nil) 
+  %li= search_menu_link_unless params[:ct] == "public", t("clinics.search.type_public"), search_option_link(@context_path, :ct => "public") 
+  %li= search_menu_link_unless params[:ct] == "private", t("clinics.search.type_private"), search_option_link(@context_path, :ct => "private") 
+
+%ul#view_options.panels{:style => "display: none"}
+  %li.label= t("clinics.search.view")
+  %li= search_menu_link_unless params[:v] == nil, t("clinics.search.view_both"), search_option_link(@context_path, :v => nil)
+  %li= search_menu_link_unless params[:v] == "map", t("clinics.search.view_map"), search_option_link(@context_path, :v => "map")
+  %li= search_menu_link_unless params[:v] == "list", t("clinics.search.view_list"), search_option_link(@context_path, :v => "list")
+
+%ul.others
+  %li.label= t("globals.others")
+  %li.highlight.highlight-active= link_to t('clinics.search.highlight'), "#", :class => "toggle-highlight"
+  %li.show-details.show-details-active= link_to t('clinics.search.show_details'), "#", :class => "toggle-details"

@@ -1,0 +1,4 @@
+%h2
+  =I18n.t('clinics.labels.new')
+  = link_to I18n.t('clinics.labels.back'), profile_departament_clinics_path(@departament)
+= render_container [:profile, :clinics, :form], :clinic => @clinic

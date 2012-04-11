@@ -1,0 +1,9 @@
+= focus_on '#clinic_name'
+= custom_form_for [:profile, @departament, clinic], :remote => remote = remote || false do |f|
+  .form-fields
+    = f.input :name
+    = f.input :street
+    = f.autocomplete_collection :state_id, State.all, :prompt => '--wybierz--' 
+    = f.autocomplete :city_name, cities_path, { :name => 'name_starts_with', :id_holder => [:city_id, true], :dependent_on => ['#clinic_state_id', "state_id_equals", "Wybierz najpierw województwo"] }, :hint => 'Przed wprowadzeniem nazwy miasta konieczne jest wybranie województwa' 
+  .form-actions
+    = f.button :submit

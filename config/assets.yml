@@ -1,0 +1,74 @@
+embed_assets: on
+
+javascripts:
+  profile:
+    - public/javascripts/jquery.min.js
+    - public/javascripts/jquery-ui.min.js
+    - public/javascripts/typewatch.js
+    - public/javascripts/rails.js
+    - public/javascripts/form.js
+    - public/javascripts/grid.js
+    - public/javascripts/dialog.js
+    - public/javascripts/profile.js
+    - public/javascripts/global.js
+    - public/javascripts/jquery.tipsy.js
+    - public/javascripts/tiny_mce/tiny_mce.js
+    - public/javascripts/tiny_mce/jquery.tinymce.js
+  application:
+    - public/javascripts/jquery.min.js
+    - public/javascripts/jquery-ui.min.js
+    - public/javascripts/rails.js
+    - public/javascripts/typewatch.js
+    - public/javascripts/form.js
+    - public/javascripts/grid.js
+    - public/javascripts/dialog.js
+    - public/javascripts/global.js
+    - public/javascripts/application.js
+    - public/javascripts/searchform.js
+    - public/javascripts/clinics.js
+    - public/javascripts/googlemap.js
+    - public/javascripts/jquery.tipsy.js
+    - public/javascripts/jquery.endless-scroll.js
+    - public/javascripts/location_picker.js
+stylesheets:
+  profile:
+    - public/stylesheets/global.css
+    - public/stylesheets/icons.css
+    - public/stylesheets/profile.css
+    - public/stylesheets/form.css
+    - public/stylesheets/tabs.css
+    - public/stylesheets/grid.css
+    - public/stylesheets/view.css
+    - public/stylesheets/pagination.css
+    - public/stylesheets/breadcrumb.css
+    - public/stylesheets/tooltip.css
+    - public/stylesheets/main_menu.css
+    - public/stylesheets/page_menu.css
+    - public/stylesheets/session_menu.css
+    - public/stylesheets/side_menu.css
+    - public/stylesheets/jquery-ui.css
+    - public/stylesheets/dialog.css
+    - public/stylesheets/tipsy.css
+    - public/stylesheets/box.css
+    - public/stylesheets/button.css
+    - public/stylesheets/button.css
+  application:
+    - public/stylesheets/global.css
+    - public/stylesheets/icons.css
+    - public/stylesheets/application.css
+    - public/stylesheets/form.css
+    - public/stylesheets/tooltip.css
+    - public/stylesheets/dialog.css
+    - public/stylesheets/searchform.css
+    - public/stylesheets/main_menu.css
+    - public/stylesheets/session_menu.css
+    - public/stylesheets/jquery-ui.css
+    - public/stylesheets/city_picker.css
+    - public/stylesheets/tipsy.css
+    - public/stylesheets/box.css
+    - public/stylesheets/clinics.css
+    - public/stylesheets/departaments.css
+    - public/stylesheets/offices.css
+    - public/stylesheets/tabs.css
+    - public/stylesheets/sessions.css
+    - public/stylesheets/button.css

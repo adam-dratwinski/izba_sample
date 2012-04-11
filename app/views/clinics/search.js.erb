@@ -1,0 +1,4 @@
+$("#clinics").find(".loading").replaceWith("<%= escape_javascript(render(@clinics, :search_phrases => @search_clinic.name.split(" "))) %>");
+<% if params[:page].to_i < @clinics.total_pages %>
+  $("#clinics").append($("<div class=\"loading\">.</div>"));
+<% end %>

@@ -1,0 +1,7 @@
+<%= js_update_form [:profile, :clinics, :form], :clinic => new_if_valid(@clinic) %>
+<% if @clinic.valid? %>
+  $('.grid').grid('reload');
+  <%= js_flash_message I18n.t('clinics.notices.created') %>
+<% else %>
+  <%= js_flash_message I18n.t('clinics.notices.failed'), :error %>
+<% end %>

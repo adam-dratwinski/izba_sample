@@ -1,0 +1,26 @@
+.view {
+  display: block;
+  font-size: 14px;
+}
+
+.view-row {
+  padding: 5px 0;
+}
+.view strong {
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.view span {
+  display: inline-block; 
+  width: 55%;
+}
+.view-actions {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}

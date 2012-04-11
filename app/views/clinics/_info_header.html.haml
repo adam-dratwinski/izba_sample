@@ -1,0 +1,19 @@
+= t('clinics.search.label')
+- if ! (@state || @city)
+  %strong= "\"" + @search_clinic.name + "\""
+  = t('clinics.search.for_address')
+- elsif @state
+  = t('clinics.search.for_state')
+- elsif @city
+  = t('clinics.search.for_city')
+%strong
+  - if params[:l] == "poland"
+    = t('clinics.search.poland')
+  - elsif @state
+    = @state.name
+  - elsif @city
+    = @city.name
+  - else
+    = session[:address]
+- if ! (@state || @city)
+  = link_to t("globals.change"), "#", :class => "location-picker"

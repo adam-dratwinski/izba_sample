@@ -1,0 +1,27 @@
+nav.session-menu {
+  float: right;
+  margin: 5px 0;
+}
+nav.session-menu .user-info {
+  float: left;
+  font-weight: bold;
+  margin: 0 5px;
+}
+nav.session-menu ul {
+  float: left;
+}
+nav.session-menu li { 
+  float: left;
+  border-left: 1px solid #bbb;
+  padding-left: 6px;
+  margin-left: 6px;
+}
+nav.session-menu li:first-child { 
+  border-left: none;
+}
+nav.session-menu li a { 
+  font-size: 12px;
+}
+nav.session-menu .selected a {
+  text-decoration: underline;
+}

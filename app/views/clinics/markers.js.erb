@@ -1,0 +1,5 @@
+<% for clinic in @clinics %>
+  <% if clinic.lat && clinic.lng %>
+      $("#map_canvas").googlemap('putMarker', <%= { :lat => clinic.lat, :lng => clinic.lng, :title => clinic.name, :url => window_clinic_path(clinic) }.to_json.html_safe %>);
+  <% end %>
+<% end %>

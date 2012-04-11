@@ -1,0 +1,8 @@
+= render "profile/departaments/edit_tabs"
+= render "/shared/tabs", :tabs => get_tabs(:clinics)
+.tabs
+  %h2=I18n.t('departaments.labels.add_clinic')
+  = link_to I18n.t('departaments.labels.add_clinic'), new_profile_departament_clinic_path(@departament), :class => "panel-button", "data-show-and-hide" => "profile_clinics_form"
+  = render_container [:profile, :clinics, :form], :html => { :style => "display: none;" }, :remote => true, :clinic => Clinic.new, :remote => true
+  %h2=I18n.t('departaments.labels.list_clinics')
+  = render_container [:profile, :clinics, :grid_table], :clinics => @clinics, :html => { :css => "grid" }

@@ -1,0 +1,104 @@
+#departament {
+  padding: 0 10px;
+}
+.departament .description {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.departament .logo-micro {
+  border: 1px solid #ddd;
+  padding: 2px;
+  display: inline-block;
+  margin-right: 5px;
+  float: left;
+}
+
+.departament .row {
+  margin: 3px 0;
+}
+
+.departament .address {
+  padding-left: 20px;
+  background: url(/images/map.png) 0 50% no-repeat;
+  line-height: 16px;
+  color: #999;
+  font-style: italic;
+  display: block;
+  margin-left: 65px;
+}
+
+#departament .description {
+  position: relative;
+}
+
+#departament .actions {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 220px;
+}
+#departament .status {
+  line-height: 16px;
+  padding: 5px;
+  display: block;
+  -webkit-border-radius: 3px;
+  text-align: left;
+}
+
+#departament .status-verified {
+  background: -webkit-gradient(linear, left top, left bottom, from(#8dce26), to(#7ea146));
+  border: 1px solid #098400;
+  margin-top: 5px;
+}
+
+#departament .status-noverified {
+  padding: 0;
+}
+
+
+#departament .status-verified span{
+  color: #fff;
+  background: transparent url(/images/apply_icon.png) 0 50% no-repeat;
+  padding-left: 20px;
+}
+
+#departament .status-noverified span {
+  color: #ff0800;
+}
+
+#departament .report-error {
+  display: block;
+  margin-top: 5px;
+}
+#departament .specialisations {
+  width: 500px;
+}
+
+.departament .contact {
+  display: none;
+  padding-left: 20px;
+  line-height: 16px;
+  color: #999;
+  font-style: italic;
+  margin-left: 65px;
+  background: url(/images/phone.png) 0 50% no-repeat;
+}
+
+#departament .contact {
+  display: block;
+}
+
+#departament h1 {
+  margin-top: 20px;
+  padding-bottom: 3px;
+}
+
+#departament h2 {
+  font-size: 14px;
+}
+#departament h2 a {
+  color: #3c3c33;
+}

@@ -1,0 +1,11 @@
+- title t("clinics.labels.others_title", :name => @clinic.name)
+#clinic
+  = render "info"
+  = render "/shared/tabs", :tabs => get_tabs(:clinics)
+  .tabs
+    .offices
+      - unless @clinics.empty?
+        = render @clinics, :search_phrases => nil
+      - else
+        .box-info
+          = t("clinics.errors.empty")

@@ -1,0 +1,101 @@
+
+.button,
+.panel-button {
+  background-repeat: no-repeat;
+  line-height: 34px;
+  height: 34px;
+  background-position: 0 50%;
+  border: 1px solid #bbbbbb;
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(#ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eeeeee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #6688ee;
+  padding: 0 20px;
+  padding-bottom: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+a.button {
+  padding-bottom: 0;
+}
+.panel-button {
+  display: block;
+  position: relative;
+}
+.panel-button:hover,
+.button:hover {
+  border: 1px solid #999999;
+  -moz-box-shadow: 0 0 2px 0 #777777;
+  -webkit-box-shadow: 0 0 2px 0 #777777;
+  box-shadow: 0 0 2px 0 #777777;
+  text-decoration: none;
+}
+.panel-button:focus, 
+.button:focus {
+  border: 1px solid #999999;
+  -moz-box-shadow: 0 0 2px 0 #777777;
+  -webkit-box-shadow: 0 0 2px 0 #777777;
+  box-shadow: 0 0 2px 0 #777777;
+}
+.panel-button:active, 
+.button:active { 
+  background: -moz-linear-gradient(top, #dddddd, #ffffff); 
+  background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#fff));
+  background: -o-linear-gradient(#dddddd, #ffffff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#ffffff');
+}
+
+.panel-button {
+  font-weight: normal;
+  padding: 0 5px;
+}
+
+.panel-button .loading {
+  width: 60px;
+  height: 20px;
+  background: url(/images/grid-loader.gif);
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.form-fields-inline {
+  display: inline-block;
+}
+.form-fields-inline .form-row {
+  float: left;
+}
+.form-fields-inline .button {
+  border-left: none;
+  -moz-border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  float: left;
+}
+
+.button span {
+  display: none;
+}
+
+.button-loading {
+  padding: 0 9px 0 10px;
+}
+
+.button-loading span {
+  background: url(/images/customform/ajax-loader.gif) 50% 50% no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 19px;
+  width: 16px;
+  margin-right: 5px;
+}
+

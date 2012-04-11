@@ -1,0 +1,225 @@
+.page-wrapper {
+  width: 970px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+  float: left;
+}
+
+#geolocation_hint {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#application aside {
+  background: #f1f1f1;
+  border-top: 1px solid #bbb;
+}
+
+#application aside {
+  float: left;
+  width: 219px;
+  padding-top: 26px;
+  background: #fff;
+  border: none;
+  border-left: 1px solid #fff;
+  margin-left: -1px;
+}
+
+aside ul:first-child {
+  border-top: 1px solid #bbb;
+}
+
+aside ul {
+  float: left;
+  width: 100%;
+  border-left: 1px solid #bbb;
+  margin-left: -1px;
+}
+
+#content {
+  float: left;
+  width: 750px;
+}
+
+#application #content {
+  background: #fff;
+  -moz-box-shadow: -1px -1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: -1px -1px 2px rgba(0,0,0,0.3);
+  box-shadow: -1px -1px 2px rgba(0,0,0,0.3);
+  min-height: 550px;
+}
+
+
+#user_location {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #3c3c33;
+  margin-top: 10px;
+}
+
+#location_picker {
+  width: 800px;
+}
+#location_picker .map-canvas {
+  display: block;
+  height: 300px;
+  background: #ddd url(/images/grid-loader.gif) 50% 50% no-repeat;
+  border: 1px solid #bbb;
+}
+
+#location_picker .actions {
+  margin-top: 10px;
+}
+
+#user_location p a {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #bbb;
+}
+
+#top_phrases {
+  margin: 20px auto;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 14px;
+  width: 500px;
+}
+
+#body {
+  background: #f1f1f1;
+  float: left;
+  border-left: 1px solid #bbb;
+}
+
+.location_options {
+  margin: 0;
+  padding-top: 0;
+  margin: 2px 0;
+  margin-top: 20px;
+}
+.panels li a {
+  padding: 5px 10px;
+  display: block;
+}
+.panels li a:hover {
+  background: #fff;
+  text-decoration: none;
+}
+.search-options .others {
+  padding-top: 3px;
+}
+.others li.label, 
+.panels li.label { 
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding: 5px 10px;
+  font-size: 13px;
+  padding-bottom: 3px;
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(#ffffff, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eeeeee));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+  color: #555;
+  font-weight: bold;
+}
+.panels:first-child li.label {
+  margin-top: 0;
+  border-top: none;
+}
+.panels li {
+  margin: 0;
+  padding-top: 3px;
+}
+
+.panels li strong {
+  background: #bbcee9;
+  padding: 3px 10px;
+  border-top: 1px solid #8faad9;
+  border-bottom: 1px solid #8faad9;
+  display: block;
+}
+
+.search-options .highlight a {
+  background-image: url(/images/checkbox_off.png);
+}
+.search-options .highlight {
+  background: #fff;
+}
+
+.search-options .highlight-active a {
+  background-image: url(/images/checkbox_on.png);
+}
+.search-options .highlight-active {
+  background: #ffeea0;
+}
+
+.search-options .highlight a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 21px;
+  background-repeat: no-repeat;
+  background-position: 3px 50%;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  display: block;
+}
+
+.search-options .highlight a:hover {
+  text-decoration:none;
+}
+
+.search-options .show-details a {
+  background-image: url(/images/zoom_in.png);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 21px;
+  background-repeat: no-repeat;
+  background-position: 3px 50%;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  display: block;
+}
+.search-options .show-details {
+  background: transparent;
+}
+
+.search-options .show-details-active a {
+  background-image: url(/images/zoom_out.png);
+}
+.search-options .show-details-active {
+  background: #fff;
+}
+
+.search-options .others a:hover {
+  text-decoration:none;
+}
+
+.search-options .others li {
+  margin-bottom: 3px;
+}
+
+#page_parts #content {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#page_parts #content p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+#application #content {
+  border-left: 1px solid #bbb;
+  margin-left: -1px;
+}
+
+#clinics_results h2 {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #bbb;
+}

@@ -1,0 +1,54 @@
+.box,
+.box-notice,
+.box-info,
+.box-error,
+.box-alert {
+  padding: 8px 8px;
+  margin: 10px 0 10px 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  font-weight: bold;
+  padding-right: 22px;
+}
+.box img,
+.box-notice img,
+.box-info img,
+.box-error img,
+.box-alert img {
+  position: absolute; 
+  right: 3px;
+  top: 3px;
+  cursor: pointer;
+}
+.box a,
+.box-notice a,
+.box-info a,
+.box-error a,
+.box-alert a {
+  font-weight: normal;
+  text-decoration: underline;
+}
+.box-notice {
+  background-color: #e0f2cb;
+  border: solid 1px #6da827;
+  color: #6da827;
+}
+.box-error, .box-alert {
+  background-color: #fad4b4;
+  border: solid 1px #ce2700;
+  color: #ce2700;
+}
+
+.box-info {
+  -moz-border-radius: 3px;
+  color: #2e74b2;
+  background: #d8e1e9;
+  border: 1px solid #2e74b2;
+}
+
+.box-light {
+  padding: 3px;
+  border: 1px solid #bbb;;
+}

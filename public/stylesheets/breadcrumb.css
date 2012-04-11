@@ -1,0 +1,14 @@
+nav.breadcrumb {
+
+}
+
+nav.breadcrumb li {
+  display: inline-block;
+  padding-left: 20px;
+  background: url(/images/breadcrumb.png) 0 0 no-repeat;
+}
+
+nav.breadcrumb li:first-child {
+  background: none;
+  padding-left:0;
+}
